@@ -399,6 +399,25 @@ nav {
 }
 .text-center { text-align: center; }
 
+/* --- Tabs styling --- */
+.tabs-wrap { background: white; border-bottom: 1px solid var(--border); }
+.tabs { max-width:1200px; margin:0 auto; display:flex; gap:8px; padding:10px 2rem; }
+.tab-btn { background: transparent; border: none; padding:10px 14px; border-radius:12px; font-weight:600; cursor:pointer; color:var(--muted); transition:all .15s; }
+.tab-btn.active { background: linear-gradient(90deg,var(--pink),var(--purple)); color:white; box-shadow:0 6px 20px rgba(124,58,237,0.12); }
+.tab-content { max-width:1200px; margin:1.25rem auto 2.5rem; padding:1.25rem 2rem; background: white; border-radius:12px; box-shadow: 0 10px 30px rgba(15,23,42,0.04); }
+.tab-loading, .tab-error { padding:2rem; text-align:center; color:var(--muted); }
+.tab-pane h2 { margin-bottom:0.5rem; font-family:'Playfair Display',serif; }
+.home-grid { display:flex; gap:1rem; margin-top:1rem; }
+.home-grid .card { flex:1; padding:1rem; border-radius:10px; background:linear-gradient(135deg,#fff0f5,#f3e8ff); cursor:pointer; }
+.matches-list { list-style:none; padding-left:0; }
+.match-item { padding:0.6rem 0.4rem; border-bottom:1px solid var(--border); cursor:pointer; }
+.messages-list .msg { padding:0.6rem 0.8rem; border-radius:8px; background:var(--pink-pale); margin-bottom:0.6rem; }
+.profile-card { display:flex; gap:1rem; align-items:center; }
+.profile-avatar { width:64px; height:64px; border-radius:50%; background:linear-gradient(135deg,var(--pink),var(--purple)); color:white; display:flex; align-items:center; justify-content:center; font-weight:700; }
+.settings-form label { display:block; margin-bottom:0.75rem; color:var(--muted); }
+.btn-save { background:var(--purple); color:white; border:none; padding:0.5rem 1rem; border-radius:8px; cursor:pointer; }
+
+
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

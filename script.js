@@ -71,3 +71,42 @@ document.querySelector('.action-heart')?.addEventListener('click', function() {
 if (typeof lucide !== 'undefined') {
   lucide.createIcons();
 }
+
+// --- Tab loading system ---
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabContent = document.getElementById('tab-content');
+
+async function loadTab(name){
+  if(!tabContent) return;
+  tabContent.innerHTML = '<div class="tab-loading">Loading…</div>';
+  try{
+    const res = await fetch(`tabs/${name}.html`);
+    if(!res.ok) throw new Error('Failed to fetch');
+    const html = await res.text();
+    tabContent.innerHTML = html;
+    // try to load optional tab script
+    try{
+      const mod = await import(`./tabs/${name}.js`);
+      if(mod && typeof mod.init === 'function') mod.init(tabContent);
+    }catch(e){
+      // no tab script, ignore
+    }
+  }catch(err){
+    tabContent.innerHTML = '<div class="tab-error">Could not load content.</div>';
+  }
+}
+
+tabButtons.forEach(btn=> btn.addEventListener('click', async (e)=>{
+  const name = btn.dataset.tab;
+  tabButtons.forEach(b=>{ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+  btn.classList.add('active');
+  btn.setAttribute('aria-selected','true');
+  await loadTab(name);
+}));
+
+// Load default tab (home) on first load
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', ()=> loadTab('home'));
+} else {
+  loadTab('home');
+}
