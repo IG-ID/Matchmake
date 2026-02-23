@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LoveConnect – Find Your Perfect Match</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#">
+      <div class="logo-icon">
+        <svg class="lucide-icon" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </div>
+      LoveConnect
+    </a>
+    <ul class="nav-links">
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#success-stories">Success Stories</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-ghost">Sign In</button>
+      <button class="btn-primary">Get Started</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>Find Your <span>Perfect Match</span> Today</h1>
+      <p>Join millions of singles finding meaningful connections through our advanced AI-powered matching algorithm. Your soulmate is just a swipe away.</p>
+      <div class="hero-ctas">
+        <a href="#" class="btn-hero">Start Your Journey →</a>
+        <a href="#" class="btn-demo">
+          <svg class="lucide-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+          Watch Demo
+        </a>
+      </div>
+      <div class="hero-social-proof">
+        <div>
+          <div class="avatar-stack">
+            <div class="av">J</div>
+            <div class="av">M</div>
+            <div class="av">S</div>
+            <div class="av">K</div>
+          </div>
+        </div>
+        <div>
+          <div class="proof-stars">★★★★★</div>
+          <div class="proof-text">4.9/5 from 12K+ reviews</div>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-stat">
+          <strong>2M+</strong>
+          <span>Active Users</span>
+        </div>
+        <div class="proof-stat">
+          <strong>500K+</strong>
+          <span>Matches Daily</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-ui">
+      <div class="match-card">
+        <div class="match-card-img">
+          <svg class="lucide-icon" width="80" height="80" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
+          </svg>
+          <div class="match-card-info">
+            <h3>Sarah, 28</h3>
+            <p>
+              <svg class="lucide-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              </svg>
+              Ilishan, OG · 2 miles away
+            </p>
+          </div>
+        </div>
+        <div class="match-actions">
+          <button class="action-btn action-x">
+            <svg class="lucide-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+          <button class="action-btn action-heart" style="color:white;">
+            <svg class="lucide-icon" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </button>
+          <button class="action-btn action-star">
+            <svg class="lucide-icon" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <polygon points="12 2 15.09 10.26 24 10.26 17.55 16.52 20.64 24.78 12 18.52 3.36 24.78 6.45 16.52 0 10.26 8.91 10.26 12 2"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item reveal">
+      <div class="stat-icon pink">
+        <svg class="lucide-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M16 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+        </svg>
+      </div>
+      <div class="stat-number">2.5M+</div>
+      <div class="stat-label">Active Members</div>
+      <div class="stat-sublabel">Growing daily worldwide</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-icon purple">
+        <svg class="lucide-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </div>
+      <div class="stat-number">500K+</div>
+      <div class="stat-label">Daily Matches</div>
+      <div class="stat-sublabel">Connections made every day</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-icon orange">
+        <svg class="lucide-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+          <path d="M6.5 3l-1 4h16l-1-4M7 7l-1.5 12c-.08.5.34 1 .84 1h12.32c.5 0 .92-.5.84-1l-1.5-12M9 10v6M12 10v6M15 10v6"/>
+        </svg>
+      </div>
+      <div class="stat-number">150K+</div>
+      <div class="stat-label">Success Stories</div>
+      <div class="stat-sublabel">Couples found love here</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-icon blue">
+        <svg class="lucide-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 2a14.5 14.5 0 0 1 0 20M2 12a14.5 14.5 0 0 1 20 0"},M2 12a14.5 14.5 0 0 0 20 0"/>
+        </svg>
+      </div>
+      <div class="stat-number">150+</div>
+      <div class="stat-label">Countries</div>
+      <div class="stat-sublabel">Available worldwide</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── HOW IT WORKS ────────────────────────── -->
+<section class="section" id="how-it-works">
+  <div class="section-inner">
+    <div class="text-center">
+      <div class="section-tag">HOW IT WORKS</div>
+      <h2 class="section-title">Find Love in <span>3 Simple Steps</span></h2>
+      <p class="section-subtitle">Our intelligent matching system helps you connect with compatible singles who share your interests, values, and relationship goals.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-num p">1</div>
+        <div class="step-img s1">
+          <svg class="lucide-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
+          </svg>
+        </div>
+        <div class="step-body">
+          <h3>Create Your Profile</h3>
+          <p>Sign up in minutes and tell us about yourself. Add photos, share your interests, and let your personality shine through your profile.</p>
+          <ul class="step-features">
+            <li>Upload up to 9 photos</li>
+            <li>Complete personality quiz</li>
+            <li>Set your preferences</li>
+          </ul>
+        </div>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num pu">2</div>
+        <div class="step-img s2">
+          <svg class="lucide-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9l3 3 3-3M9 15l3 3 3-3"/>
+          </svg>
+        </div>
+        <div class="step-body">
+          <h3>Get Smart Matches</h3>
+          <p>Our AI algorithm analyzes your preferences and behavior to suggest highly compatible matches tailored just for you.</p>
+          <ul class="step-features">
+            <li>AI-powered matching</li>
+            <li>Compatibility scores</li>
+            <li>Unlimited browsing</li>
+          </ul>
+        </div>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num g">3</div>
+        <div class="step-img s3">
+          <svg class="lucide-icon" width="64" height="64" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <div class="step-body">
+          <h3>Start Connecting</h3>
+          <p>Like profiles that interest you, start conversations, and arrange dates. Your perfect match could be waiting to hear from you!</p>
+          <ul class="step-features">
+            <li>Instant messaging</li>
+            <li>Video chat available</li>
+            <li>Safe & secure platform</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FEATURES ────────────────────────────── -->
+<section class="section features-section" id="features">
+  <div class="section-inner">
+    <div class="text-center">
+      <div class="section-tag">FEATURES</div>
+      <h2 class="section-title">Everything You Need to <span>Find Love</span></h2>
+      <p class="section-subtitle">Powerful features designed to help you make meaningful connections and find your perfect match.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fc1 reveal">
+        <div class="feature-icon fi1">
+          <svg class="lucide-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+            <rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9l3 3 3-3M9 15l3 3 3-3"/>
+          </svg>
+        </div>
+        <h3>AI Smart Matching</h3>
+        <p>Our advanced algorithm learns your preferences to suggest your best matches based on compatibility, interests, and personality.</p>
+      </div>
+      <div class="feature-card fc2 reveal">
+        <div class="feature-icon fi2">
+          <svg class="lucide-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3>Verified Profiles</h3>
+        <p>Every profile is manually reviewed and photo verified to ensure authenticity. You can trust that who you see is real and trustworthy.</p>
+      </div>
+      <div class="feature-card fc3 reveal">
+        <div class="feature-icon fi3">
+          <svg class="lucide-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+          </svg>
+        </div>
+        <h3>Video Chat</h3>
+        <p>Get to know your matches better before meeting in person. Video chat from the comfort of home with crystal-clear connection.</p>
+      </div>
+      <div class="feature-card fc4 reveal">
+        <div class="feature-icon fi4">
+          <svg class="lucide-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <h3>Location-Based</h3>
+        <p>Find singles near you with our location-based search. Adjust your distance preferences to meet people in your area or expand your search.</p>
+      </div>
+      <div class="feature-card fc5 reveal">
+        <div class="feature-icon fi5">
+          <svg class="lucide-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <h3>Instant Messaging</h3>
+        <p>Real-time chat with matches instantly. Share photos, voice messages, and emojis to express yourself and build connections.</p>
+      </div>
+      <div class="feature-card fc6 reveal">
+        <div class="feature-icon fi6">
+          <svg class="lucide-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="9" r="1.5"/>
+          </svg>
+        </div>
+        <h3>Privacy Controls</h3>
+        <p>Complete control over your privacy. Choose who can see your profile, block unwanted users, and report suspicious activity instantly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SUCCESS STORIES ─────────────────────── -->
+<section class="section success-section" id="success-stories">
+  <div class="section-inner">
+    <div class="text-center">
+      <div class="section-tag">SUCCESS STORIES</div>
+      <h2 class="section-title">Real Love Stories from <span>Real People</span></h2>
+      <p class="section-subtitle">Join thousands of happy couples who found their soulmate on LoveConnect. Your story could be next!</p>
+    </div>
+    <div class="stories-grid">
+      <div class="story-card reveal">
+        <div class="story-img" style="background:linear-gradient(135deg,#fce7f3,#ede9fe);">
+          <svg class="lucide-icon" width="80" height="80" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M16 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+          </svg>
+        </div>
+        <div class="story-body">
+          <div class="story-meta">
+            <div class="story-avatar">EJ</div>
+            <div class="story-meta-text">
+              <h4>Emma & James</h4>
+              <span>Matched in March 2023</span>
+            </div>
+          </div>
+          <div class="story-stars">★★★★★</div>
+          <blockquote>"I never believed in online dating until I met James on LoveConnect. The compatibility score was 96% and we instantly clicked. Now we're planning our wedding!"</blockquote>
+          <div class="story-badge">
+            <svg class="lucide-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            Engaged after 8 months
+          </div>
+        </div>
+      </div>
+      <div class="story-card reveal">
+        <div class="story-img" style="background:linear-gradient(135deg,#fef3c7,#fed7aa);">
+          <svg class="lucide-icon" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <div class="story-body">
+          <div class="story-meta">
+            <div class="story-avatar">ML</div>
+            <div class="story-meta-text">
+              <h4>Michael & Lisa</h4>
+              <span>Matched in January 2023</span>
+            </div>
+          </div>
+          <div class="story-stars">★★★★★</div>
+          <blockquote>"LoveConnect's AI matching is incredible! Lisa and I share so many interests. We went from first message to first date in just 3 days. Best decision ever!"</blockquote>
+          <div class="story-badge">
+            <svg class="lucide-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            Together for 1 year
+          </div>
+        </div>
+      </div>
+      <div class="story-card reveal">
+        <div class="story-img" style="background:linear-gradient(135deg,#d1fae5,#a7f3d0);">
+          <svg class="lucide-icon" width="80" height="80" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <div class="story-body">
+          <div class="story-meta">
+            <div class="story-avatar">DS</div>
+            <div class="story-meta-text">
+              <h4>David & Sophie</h4>
+              <span>Matched in February 2023</span>
+            </div>
+          </div>
+          <div class="story-stars">★★★★★</div>
+          <blockquote>"After trying other apps, LoveConnect stood out. The quality of matches was amazing. Sophie and I connected immediately and haven't looked back since!"</blockquote>
+          <div class="story-badge">
+            <svg class="lucide-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            Living together now
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="read-more-wrap">
+      <a href="#" class="btn-outline">Read More Success Stories</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SAFETY ──────────────────────────────── -->
+<section class="section safety-section">
+  <div class="safety-inner">
+    <div class="safety-visual reveal">
+      <svg class="lucide-icon" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <circle cx="12" cy="13" r="2"/>
+      </svg>
+    </div>
+    <div>
+      <div class="section-tag">SAFETY & SECURITY</div>
+      <h2 class="section-title" style="text-align:left;">Your Safety is Our <span style="color:var(--purple);">Top Priority</span></h2>
+      <p style="color:var(--muted);line-height:1.7;margin-bottom:0;">We've implemented multiple layers of security to ensure you can focus on finding love without worrying about your safety or privacy.</p>
+      <div class="safety-features">
+        <div class="safety-item reveal">
+          <div class="safety-item-icon si1">
+            <svg class="lucide-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Profile Verification</h4>
+            <p>All profiles undergo manual review and photo verification to ensure authenticity and prevent fake accounts.</p>
+          </div>
+        </div>
+        <div class="safety-item reveal">
+          <div class="safety-item-icon si2">
+            <svg class="lucide-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <div>
+            <h4>End-to-End Encryption</h4>
+            <p>All your messages and personal data are encrypted with military-grade security protocols.</p>
+          </div>
+        </div>
+        <div class="safety-item reveal">
+          <div class="safety-item-icon si3">
+            <svg class="lucide-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Privacy Controls</h4>
+            <p>Complete control over who sees your profile and personal information. Block and report features available.</p>
+          </div>
+        </div>
+        <div class="safety-item reveal">
+          <div class="safety-item-icon si4">
+            <svg class="lucide-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12m21.17-7.17l-7.07-7.07a2 2 0 0 0-2.83 0L2 12"/>
+            </svg>
+          </div>
+          <div>
+            <h4>24/7 Support Team</h4>
+            <p>Our dedicated safety team monitors the platform around the clock and responds to reports immediately.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── APP DOWNLOAD ────────────────────────── -->
+<section class="app-section">
+  <div class="app-inner">
+    <div class="app-text">
+      <div class="section-tag">GET THE APP</div>
+      <h2>Take Love With You <span>Everywhere</span></h2>
+      <p>Download our app and never miss a connection. Browse matches, chat with your favorites, and get notified instantly when someone likes you — all from your pocket.</p>
+      <div class="app-buttons">
+        <a href="#" class="app-btn">
+          <div class="app-btn-icon">
+            <svg class="lucide-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M17.05 13.5c0-3.07-2.5-5.68-5.56-5.68s-5.56 2.61-5.56 5.68c0 3.06 2.5 5.68 5.56 5.68s5.56-2.62 5.56-5.68zM3 6.03C3 4.41 4.41 3 5.98 3h.03c1.62 0 3 1.41 3 2.99s-1.38 3-3 3c-1.62 0-3-1.39-3-3zm4 13.5c1.62 0 3 1.36 3 3.04s-1.38 3-3 3-3-1.35-3-3.04c0-1.68 1.38-3 3-3zm13-3.5c0 1.62-1.41 3-3 3-1.62 0-3-1.38-3-3 0-1.62 1.38-3 3-3 1.59 0 3 1.38 3 3z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="app-btn-text">Download on the</div>
+            <div class="app-btn-label">App Store</div>
+          </div>
+        </a>
+        <a href="#" class="app-btn">
+          <div class="app-btn-icon">
+            <svg class="lucide-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+          </div>
+          <div>
+            <div class="app-btn-text">GET IT ON</div>
+            <div class="app-btn-label">Google Play</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="app-visual reveal">
+      <svg class="lucide-icon" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PRICING ─────────────────────────────── -->
+<section class="section pricing-section" id="pricing">
+  <div class="section-inner">
+    <div class="text-center">
+      <div class="section-tag">PRICING PLANS</div>
+      <h2 class="section-title">Choose Your <span>Perfect Plan</span></h2>
+      <p class="section-subtitle">Start free and upgrade anytime to unlock premium features and boost your chances of finding love.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card reveal">
+        <div class="pricing-name">Free</div>
+        <div class="pricing-price">$0<span>/mo</span></div>
+        <div class="pricing-desc">Perfect for getting started</div>
+        <ul class="pricing-features">
+          <li><span class="check-icon">✓</span> Browse profiles</li>
+          <li><span class="check-icon">✓</span> 5 daily matches</li>
+          <li><span class="check-icon">✓</span> Basic filters</li>
+          <li><span class="x-icon">✕</span> <span style="color:#9ca3af;">Unlimited messaging</span></li>
+          <li><span class="x-icon">✕</span> <span style="color:#9ca3af;">Video chat</span></li>
+          <li><span class="x-icon">✕</span> <span style="color:#9ca3af;">See who liked you</span></li>
+        </ul>
+        <button class="btn-plan">Get Started Free</button>
+      </div>
+      <div class="pricing-card featured reveal">
+        <div class="pricing-badge">MOST POPULAR</div>
+        <div class="pricing-name">Premium</div>
+        <div class="pricing-price">$4<span>/mo</span></div>
+        <div class="pricing-desc">Best for serious daters</div>
+        <ul class="pricing-features">
+          <li><span class="check-icon">✓</span> Unlimited matches</li>
+          <li><span class="check-icon">✓</span> Unlimited messaging</li>
+          <li><span class="check-icon">✓</span> Video chat</li>
+          <li><span class="check-icon">✓</span> See who liked you</li>
+          <li><span class="check-icon">✓</span> Advanced filters</li>
+          <li><span class="check-icon">✓</span> Boost profile 3×/month</li>
+        </ul>
+        <button class="btn-plan">Start Premium</button>
+      </div>
+      <div class="pricing-card reveal">
+        <div class="pricing-name">Elite</div>
+        <div class="pricing-price">$9<span>/mo</span></div>
+        <div class="pricing-desc">For those who want it all</div>
+        <ul class="pricing-features">
+          <li><span class="check-icon">✓</span> Everything in Premium</li>
+          <li><span class="check-icon">✓</span> Daily profile boosts</li>
+          <li><span class="check-icon">✓</span> Priority support</li>
+          <li><span class="check-icon">✓</span> Compatibility reports</li>
+          <li><span class="check-icon">✓</span> VIP match suggestions</li>
+          <li><span class="check-icon">✓</span> Relationship coaching</li>
+        </ul>
+        <button class="btn-plan">Go Elite</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TESTIMONIALS ────────────────────────── -->
+<section class="section testimonials-section">
+  <div class="section-inner">
+    <div class="text-center">
+      <div class="section-tag">TESTIMONIALS</div>
+      <h2 class="section-title">What Our Users <span>Are Saying</span></h2>
+      <p class="section-subtitle">Hear from thousands of happy singles who found meaningful connections on LoveConnect.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Best dating app I've ever used! The matches are incredibly accurate and I met my boyfriend here."</p>
+        <div class="t-author">
+          <div class="t-avatar">J</div>
+          <div>
+            <div class="t-name">Jessica</div>
+            <div class="t-location">Ilishan, OG</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"The AI matching is phenomenal. Every match I get is someone I'm genuinely interested in talking to."</p>
+        <div class="t-author">
+          <div class="t-avatar">O</div>
+          <div>
+            <div class="t-name">Olumide</div>
+            <div class="t-location">Ikorodu, NG</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Finally, a dating app that actually works! The interface is beautiful and easy to use. Highly recommend!"</p>
+        <div class="t-author">
+          <div class="t-avatar">AL</div>
+          <div>
+            <div class="t-name">Amanda L.</div>
+            <div class="t-location">Chicago, US</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Met my fiancée on LoveConnect 6 months ago. The compatibility score was spot on at 94%!"</p>
+        <div class="t-author">
+          <div class="t-avatar">CP</div>
+          <div>
+            <div class="t-name">Chris P.</div>
+            <div class="t-location">Johannesburg, SA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials-grid" style="margin-top:1.2rem;">
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Love the safety features! I feel secure knowing all profiles are verified and the support team is responsive."</p>
+        <div class="t-author">
+          <div class="t-avatar">A</div>
+          <div>
+            <div class="t-name">Aluko</div>
+            <div class="t-location">Osun</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"The video chat feature is a game-changer. Got to know my matches better before meeting in person."</p>
+        <div class="t-author">
+          <div class="t-avatar">K</div>
+          <div>
+            <div class="t-name">Kevin</div>
+            <div class="t-location">Ethopia</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Premium subscription is worth every penny. The boost feature really works and I got so many quality matches."</p>
+        <div class="t-author">
+          <div class="t-avatar">LB</div>
+          <div>
+            <div class="t-name">Lauren B.</div>
+            <div class="t-location">Paris, FR</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-text">"Clean interface, great matches, and amazing customer support. LoveConnect exceeded all my expectations!"</p>
+        <div class="t-author">
+          <div class="t-avatar">DW</div>
+          <div>
+            <div class="t-name">Daniel W.</div>
+            <div class="t-location">Denver, US</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ─────────────────────────────────── -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <h2>Ready to Find Your Perfect Match?</h2>
+    <p>Join millions of singles who are finding love on LoveConnect. Your soulmate could be just one swipe away.</p>
+    <div class="cta-buttons">
+      <a href="#" class="btn-cta-white">Get Started Free →</a>
+      <a href="#" class="btn-cta-outline">Learn More</a>
+    </div>
+    <div class="cta-stats">
+      <div class="cta-stat">
+        <strong>2.5M+</strong>
+        <span>Active Users</span>
+      </div>
+      <div class="cta-sep"></div>
+      <div class="cta-stat">
+        <strong>150K+</strong>
+        <span>Success Stories</span>
+      </div>
+      <div class="cta-sep"></div>
+      <div class="cta-stat">
+        <strong>4.9/5</strong>
+        <span>User Rating</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ──────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo" style="color:#e8306b;font-family:'Playfair Display',serif;font-size:1.3rem;display:flex;align-items:center;gap:8px;">
+          <div style="width:30px;height:30px;background:var(--pink);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:0.9rem;">
+            <svg class="lucide-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          LoveConnect
+        </div>
+        <p>The most trusted dating platform connecting millions of singles worldwide. Find your perfect match with our AI-powered matching algorithm.</p>
+        <div class="social-links">
+          <a class="social-btn" href="#">
+            <svg class="lucide-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M18 2h-3a6 6 0 0 0-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a2 2 0 0 1 2-2h3z"/>
+            </svg>
+          </a>
+          <a class="social-btn" href="#">
+            <svg class="lucide-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7"/>
+            </svg>
+          </a>
+          <a class="social-btn" href="#">
+            <svg class="lucide-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8M17.5 6.5h.01"/>
+            </svg>
+          </a>
+          <a class="social-btn" href="#">
+            <svg class="lucide-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Safety Tips</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Success Stories</a></li>
+          <li><a href="#">Dating Advice</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Guidelines</a></li>
+          <li><a href="#">Licenses</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 LoveConnect. All rights reserved.</span>
+      <div class="footer-langs">
+        <a href="#">English</a>
+        <a href="#">Español</a>
+        <a href="#">Français</a>
+        <a href="#">Deutsch</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
