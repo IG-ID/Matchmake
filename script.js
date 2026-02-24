@@ -1,4 +1,3 @@
-// Scroll reveal
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
@@ -11,7 +10,6 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-// Stagger children in grids
 document.querySelectorAll('.stats-inner, .steps-grid, .features-grid, .stories-grid, .testimonials-grid, .pricing-grid, .safety-features').forEach(grid => {
   grid.querySelectorAll('.reveal').forEach((el, i) => {
     el.dataset.delay = i * 80;
@@ -20,7 +18,6 @@ document.querySelectorAll('.stats-inner, .steps-grid, .features-grid, .stories-g
 
 reveals.forEach(el => observer.observe(el));
 
-// Smooth scroll for nav links
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {
     const target = document.querySelector(link.getAttribute('href'));
@@ -31,7 +28,6 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-// Animate counter numbers on scroll
 const counters = document.querySelectorAll('.stat-number');
 const countObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -54,11 +50,9 @@ const countObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.5 });
 counters.forEach(c => countObserver.observe(c));
 
-// Heart button interaction
 document.querySelector('.action-heart')?.addEventListener('click', function() {
   this.style.transform = 'scale(1.3)';
   setTimeout(() => this.style.transform = '', 300);
-  // Show a match notification
   const notif = document.createElement('div');
   notif.style.cssText = 'position:fixed;top:80px;right:20px;background:linear-gradient(135deg,#e8306b,#7c3aed);color:white;padding:14px 20px;border-radius:16px;font-family:DM Sans,sans-serif;font-weight:600;font-size:0.9rem;box-shadow:0 8px 30px rgba(0,0,0,0.2);z-index:9999;animation:slideIn 0.4s both;';
   notif.textContent = "It's a match!";
@@ -67,46 +61,83 @@ document.querySelector('.action-heart')?.addEventListener('click', function() {
   setTimeout(() => notif.remove(), 3000);
 });
 
-// Initialize Lucide icons if library is loaded
 if (typeof lucide !== 'undefined') {
   lucide.createIcons();
 }
 
-// --- Tab loading system ---
-const tabButtons = document.querySelectorAll('.tab-btn');
-const tabContent = document.getElementById('tab-content');
+const components = {
+  navbar:              '#component-nav',
+  hero:                '#component-hero',
+  stats:               '#component-stats',
+  how:                 '#component-how',
+  features:            '#component-features',
+  success:             '#component-success',
+  safety:              '#component-safety',
+  app:                 '#component-app',
+  pricing:             '#component-pricing',
+  testimonials:        '#component-testimonials',
+  cta:                 '#component-cta',
+  footer:              '#component-footer'
+};
 
-async function loadTab(name){
-  if(!tabContent) return;
-  tabContent.innerHTML = '<div class="tab-loading">Loading…</div>';
-  try{
-    const res = await fetch(`tabs/${name}.html`);
-    if(!res.ok) throw new Error('Failed to fetch');
-    const html = await res.text();
-    tabContent.innerHTML = html;
-    // try to load optional tab script
-    try{
-      const mod = await import(`./tabs/${name}.js`);
-      if(mod && typeof mod.init === 'function') mod.init(tabContent);
-    }catch(e){
-      // no tab script, ignore
-    }
-  }catch(err){
-    tabContent.innerHTML = '<div class="tab-error">Could not load content.</div>';
+async function loadComponent(name, selector) {
+  const el = document.querySelector(selector);
+  if (!el) return;
+  try {
+    const res = await fetch(`components/${name}.html`);
+    if (!res.ok) throw new Error('no component');
+    el.innerHTML = await res.text();
+  } catch (e) {
+    console.error('loadComponent', name, e);
   }
 }
 
-tabButtons.forEach(btn=> btn.addEventListener('click', async (e)=>{
-  const name = btn.dataset.tab;
-  tabButtons.forEach(b=>{ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
-  btn.classList.add('active');
-  btn.setAttribute('aria-selected','true');
-  await loadTab(name);
-}));
+async function loadAllComponents() {
+  await Promise.all(
+    Object.entries(components).map(([name, sel]) => loadComponent(name, sel))
+  );
+  initObservers();
+}
 
-// Load default tab (home) on first load
-if(document.readyState === 'loading'){
-  document.addEventListener('DOMContentLoaded', ()=> loadTab('home'));
+function initObservers() {
+  document.querySelectorAll('.stats-inner, .steps-grid, .features-grid, .stories-grid, .testimonials-grid, .pricing-grid, .safety-features').forEach(grid => {
+    grid.querySelectorAll('.reveal').forEach((el, i) => {
+      el.dataset.delay = i * 80;
+    });
+  });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  document.querySelectorAll('.stat-number').forEach(c => countObserver.observe(c));
+
+  document.querySelector('.action-heart')?.addEventListener('click', function () {
+    this.style.transform = 'scale(1.3)';
+    setTimeout(() => this.style.transform = '', 300);
+    const notif = document.createElement('div');
+    notif.style.cssText = 'position:fixed;top:80px;right:20px;background:linear-gradient(135deg,#e8306b,#7c3aed);color:white;padding:14px 20px;border-radius:16px;font-family:DM Sans,sans-serif;font-weight:600;font-size:0.9rem;box-shadow:0 8px 30px rgba(0,0,0,0.2);z-index:9999;animation:slideIn 0.4s both;';
+    notif.textContent = "It's a match!";
+    document.body.appendChild(notif);
+    setTimeout(() => notif.style.opacity = '0', 2500);
+    setTimeout(() => notif.remove(), 3000);
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', loadAllComponents);
 } else {
-  loadTab('home');
+  loadAllComponents();
 }

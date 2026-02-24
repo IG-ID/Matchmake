@@ -1,0 +1,8 @@
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+  <!-- Globe / world icon with meridians and latitude lines -->
+  <circle cx="12" cy="12" r="9" />
+  <path d="M2.5 12h19" />
+  <path d="M12 2.5c2.5 2.5 2.5 17 0 19.5" />
+  <path d="M6 4.5c1.5 3 1.5 12 0 15.5" />
+  <path d="M18 4.5c-1.5 3-1.5 12 0 15.5" />
+</svg>

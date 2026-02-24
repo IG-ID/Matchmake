@@ -24,7 +24,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ─── NAVBAR ─────────────────────────────── */
+/*  NAVBAR  */
 nav {
   position: sticky;
   top: 0;
@@ -109,7 +109,7 @@ nav {
   box-shadow: 0 6px 20px rgba(232,48,107,0.4);
 }
 
-/* ─── HERO ────────────────────────────────── */
+/*  HERO  */
 .hero {
   background: linear-gradient(135deg, #fff0f5 0%, #f3e8ff 50%, #e0f2fe 100%);
   padding: 5rem 2rem 4rem;
@@ -225,7 +225,7 @@ nav {
 .proof-stat strong { font-size: 1rem; font-weight: 700; color: var(--dark); }
 .proof-stat span { font-size: 0.8rem; color: var(--muted); display: block; }
 
-/* Hero right - mock UI */
+/* Hero right */
 .hero-ui {
   position: relative;
 }
@@ -322,7 +322,7 @@ nav {
   40% { transform: translateY(-5px); }
 }
 
-/* ─── STATS BAR ───────────────────────────── */
+/*  STATS BAR  */
 .stats-bar {
   background: white;
   border-top: 1px solid var(--border);
@@ -367,7 +367,9 @@ nav {
   margin-top: 2px;
 }
 
-/* ─── HOW IT WORKS ────────────────────────── */
+
+
+/*  HOW IT WORKS  */
 .section { padding: 5rem 2rem; }
 .section-inner { max-width: 1200px; margin: 0 auto; }
 .section-tag {
@@ -423,15 +425,6 @@ nav {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   position: relative;
-}
-.steps-grid::before {
-  content: '';
-  position: absolute;
-  top: 80px;
-  left: 22%;
-  right: 22%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--pink), var(--purple));
 }
 .step-card {
   background: white;
